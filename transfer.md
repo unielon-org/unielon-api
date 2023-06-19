@@ -41,3 +41,59 @@ The handling fee needs to be charged in 3 parts
 3. Doge transaction fee for the inscription (calculated by multiplying the transaction size by rate_fee, the size is usually 350 - 400 bytes)
 
 ```
+
+## Order Tracking
+
+```jsx
+curl --location 'https://unielon.com/v3/orders/id' \
+--data '{"order_id":"8a70718b-d66b-438e-8ae1-a8bdfddf3caf"}'
+
+---- Parameter Description
+order_id: order id
+
+---- Return parameter description
+
+{
+     "code": 200,
+     "msg": "success",
+     "data": {
+         "order_id": "8a70718b-d66b-438e-8ae1-a8bdfddf3caf",
+         "p": "drc-20",
+         "op": "transfer",
+         "tick": "BONE",
+         "amt": 1800,
+         "max": 0,
+         "lim": 0,
+         "dec": 0,
+         "burn": "",
+         "func": "",
+         "rate_fee": 86041533,
+         "repeat": 1,
+         "fee_tx_hash": "98d09538dca5fbab4cb34f072ff80b762f0be3e731b357d7cf115f46c7eb5a2f",
+         "drc20_tx_hash": "d708704865159e5272718835945e0ded2fc4209d75403756fdd5e018c3bee867",
+         "block_hash": "bd35161791d8e69329f5acb6a48fe6f610a750a97ed40607af248c5228c9e616",
+         "block_confirmations": 2,
+         "receive_address": "DKJZsxQ49xwewPyphaqW4fe6XG8LBqJFNe",
+         "to_address": "DDAWHWv93iVpqjh1D9QTkgJUzYyka4JKGu",
+         "fee_address": "ABQRWERBiYzQW2vUFbwHW7FN9dJJdFSoX7",
+         "order_status": 0,
+         "create_date": 1687165358
+     },
+     "total": 0
+}
+
+p, op, tick, amt, max, lim, dec, burn, func: all are inscription information
+
+rate_fee: transaction fee rate (elon per kbyte)
+repeat: number of times (for mint)
+fee_tx_hash: Whether to receive the transaction fee transfer, if there is information, it means to get it
+drc20_tx_hash: inscribed transaction
+block_hash: the block information of the inscription transaction
+block_confirmations: number of block confirmations
+receive_address: the address of the originator
+to_address: the recipient's address
+fee_address: Receive fee address
+order_status: For Mint, depoly is valid
+create_date: creation time
+
+```
