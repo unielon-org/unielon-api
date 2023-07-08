@@ -3,7 +3,7 @@
 ```jsx
 curl --location 'https://unielon.com/v3/drc20/new' \
 --header 'Content-Type: application/json' \
---data '{"p":"drc-20","op":"**deploy**","tick":"VAN", "max": "10000", "lim":"1" ,"receive_address":"DNG7tJ8LPmuk3J8568m5yypWbHX9pBvvTi", "rate_fee": "100000000"}'
+--data '{"p":"drc-20","op":"deploy","tick":"VAN", "max": "10000", "lim":"1" ,"receive_address":"DNG7tJ8LPmuk3J8568m5yypWbHX9pBvvTi", "rate_fee": "100000000"}'
 
 -- Parameter Description
 
@@ -40,7 +40,7 @@ The handling fee needs to be charged in 3 parts
 3. Doge transaction fee for the inscription (calculated by multiplying the transaction size by rate_fee, the size is usually 350 - 400 bytes)
 ```
 
-Mint
+**Mint**
 
 ```jsx
 curl --location 'https://unielon.com/v3/drc20/new' \
