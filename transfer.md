@@ -97,3 +97,63 @@ order_status: For Mint, depoly is valid
 create_date: creation time
 
 ```
+
+
+
+## Order Tracking By Hash
+
+```jsx
+curl --location 'https://unielon.com/v3/orders/hash' \
+--data '{"hash": "f5230c3dabdd594603acf5d957bab237b71a81d5093c803a96bba682fb85f7eb"}'
+
+---- Return parameter description
+
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "order_id": "cfef1cb8-228e-4d78-8db0-ed251dffaa14",
+        "p": "drc-20",
+        "op": "transfer",
+        "tick": "DWAR",
+        "amt": 6000000,
+        "max": 0,
+        "lim": 0,
+        "dec": 0,
+        "burn": "",
+        "func": "",
+        "rate_fee": null,
+        "repeat": 1,
+        "fee_tx_hash": "",
+        "drc20_tx_hash": "f5230c3dabdd594603acf5d957bab237b71a81d5093c803a96bba682fb85f7eb",
+        "block_hash": "4855c394e2b8bec7b84982338b65004b843fac59d7f58a3208caccf422855072",
+        "block_confirmations": 0,
+        "receive_address": "D666DYyVmVAg1sUnacmJGtYHKs41x1oAXE",
+        "to_address": "DQ7thPBoM4qYmxsRGbdxEsJdt6Y3u3vbAU",
+        "fee_address": "",
+        "order_status": 0,
+        "create_date": 1689122878
+    },
+    "total": 0
+}
+
+p, op, tick, amt, max, lim, dec, burn, func: all are inscription information
+
+rate_fee: transaction fee rate (elon per kbyte)
+repeat: number of times (for mint)
+fee_tx_hash: Whether to receive the transaction fee transfer, if there is information, it means to get it
+drc20_tx_hash: inscribed transaction
+block_hash: the block information of the inscription transaction
+block_confirmations: number of block confirmations
+receive_address: the address of the originator
+to_address: the recipient's address
+fee_address: Receive fee address
+order_status: For Mint, depoly is valid
+create_date: creation time
+
+```
+
+
+
+
+
