@@ -58,6 +58,27 @@ return parameter
 }
 ```
 
+## Check balances
+
+```jsx
+
+curl --location 'https://unielon.com/v3/drc20/address/tick' \
+--header 'Content-Type: application/json' \
+--data '{"receive_address":"DNLAAKAJZf4h8pheVSquisEyKCqDNDRGYm", "tick":"IDOL"}'
+
+return parameter
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "tick": "IDOL",
+        "amt": 105000
+    },
+    "total": 0
+}
+```
+
+
 ## Query the currency holding address under the drc20 token
 
 ```jsx
