@@ -9,8 +9,8 @@ https://unielon.com/v3/swap/liquidity
   "op": "create",
   "tick0": "wow",
   "tick1": "doge",
-	"amt0":"1",
-	"amt1":"1",
+  "amt0":"1",
+  "amt1":"1",
   "holder_address": "Dxxxxxxxx"
 }
 
@@ -33,8 +33,8 @@ https://unielon.com/v3/swap/new
   "op": "swap",
   "tick0": "wow",
   "tick1": "doge",
-	"amt0":"1",
-	"amt1":"1",
+  "amt0":"1",
+  "amt1":"1",
   "holder_address": "Dxxxxxxxx"
 }
 
@@ -54,7 +54,7 @@ https://unielon.com/v3/swap/getreserves
 
 -- Result 
 {
-	"reserve0": "1",
-	"reserve1": "1",
+   "reserve0": "1",
+   "reserve1": "1",
 }
 ```
