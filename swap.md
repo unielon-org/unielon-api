@@ -58,3 +58,22 @@ https://unielon.com/v3/swap/getreserves
    "reserve1": "1",
 }
 ```
+
+## **withdraw**
+
+```jsx
+https://unielon.com/v3/dogew/withdraw
+
+{ 
+	"amt":"1"
+}
+
+-- Parameter Description
+amt: Extract quantity
+
+-- Result 
+{
+	"tx_hash": ""
+}
+
+```
