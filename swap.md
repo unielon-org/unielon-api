@@ -64,6 +64,12 @@ https://unielon.com/v3/swap/getreserves
 ```jsx
 https://unielon.com/v3/swap/getliquidity
 
+{ 
+  "tick0": "wow",
+  "tick1": "doge",
+  "holder_address": "Dxxxxxxxx"
+}
+
 -- Result 
 {
    "reserve0": "1",
