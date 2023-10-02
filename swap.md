@@ -59,6 +59,18 @@ https://unielon.com/v3/swap/getreserves
 }
 ```
 
+## **getliquidity**
+
+```jsx
+https://unielon.com/v3/swap/getliquidity
+
+-- Result 
+{
+   "reserve0": "1",
+   "reserve1": "1",
+}
+```
+
 ## **withdraw**
 
 ```jsx
