@@ -3,6 +3,34 @@
 unielon.requestAccounts()
 ```
 
+# Send Dogecoin
+```javascript
+unielon.sendDoge({toAddress: 'DKyVNmxcvFmnSqfD9nZ9vEfQTXPLP3mtU4', sendAmount: 1.2})
+```
+-- Parameter Description
+
+toAddress: the recipient's address
+
+sendAmount: transfer amount
+
+```javascript
+success return
+{
+    "code":200,
+    "data":{
+        "tx_hash":"61a8c758faf748a34847d5f5c61252efc896c999ab5b398e6b16b67b64d3499c"
+    },
+    "msg":"success"
+}
+```
+
+```javascript
+failed return
+{
+    "code":xxx,
+    "msg":"xxxx"
+}
+```
 # Mint Transfer
 ```javascript
 unielon.sendDogecoin(to_address, amt, {feeRate: rate_fee, type: 'mint'})
