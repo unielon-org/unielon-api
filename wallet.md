@@ -48,7 +48,7 @@ var utxo = {
 
 var transaction = new bitcore.Transaction()
   .from(utxo)
-  .to(sendAddress, sendAmount)
+  .to(transferAddress, transferQuantity)
   .fee(transactionFee)
   .change(changeAddress)
   .sign(privateKey)
